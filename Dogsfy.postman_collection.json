@@ -11,11 +11,21 @@
 				{
 					"name": "Add User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"test23\",\n  \"email\": \"test3@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": -34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
+							"raw": "{\n  \"username\": \"testNorth2\",\n  \"email\": \"testnorth2@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": 34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -23,12 +33,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3003/api/users",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/users",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3003",
 							"path": [
 								"api",
 								"users"
@@ -45,7 +53,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -53,16 +61,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/users/n602658194b544ac887663143542292aa",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/users/nbd2e671fc724448f84e9e94013ce7e57",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"users",
-								"n602658194b544ac887663143542292aa"
+								"nbd2e671fc724448f84e9e94013ce7e57"
 							]
 						}
 					},
@@ -76,7 +82,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -84,16 +90,14 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/users/s91a740aac5fd415e8f340fd4a3f680f7",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/users/s32abbcddcc704b598974e4afdb2db7fc",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"users",
-								"s91a740aac5fd415e8f340fd4a3f680f7"
+								"s32abbcddcc704b598974e4afdb2db7fc"
 							]
 						}
 					},
@@ -102,11 +106,21 @@
 				{
 					"name": "Update User",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{auth_token}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"test\"\n}",
+							"raw": "{\n  \"password\": 654321,\n  \"confirm_password\": 654321\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -114,16 +128,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/users/5cbc3c46344c4290bde23ba8e61fe416",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/users/s5dbac7879d6c4c2fae171c6cf82eede0",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"users",
-								"5cbc3c46344c4290bde23ba8e61fe416"
+								"s5dbac7879d6c4c2fae171c6cf82eede0"
 							]
 						}
 					},
@@ -137,7 +149,12 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"value": "{{auth_token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -145,12 +162,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/users",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/users",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"users"
@@ -171,7 +186,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"testNorth\",\n  \"email\": \"testnorth@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": 34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
+							"raw": "{\n  \"username\": \"testn\",\n  \"email\": \"testn@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": 34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -179,12 +194,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/register",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/auth/register",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"auth",
@@ -201,7 +214,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"email\": \"test@gmail.com\",\n  \"password\": 123456\n}",
+							"raw": "{\n  \"email\": \"testn@gmail.com\",\n  \"password\": 123456\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -209,12 +222,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/auth/login",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/auth/login",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"auth",
@@ -237,7 +248,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rub3J0aEBnbWFpbC5jb20iLCJpZCI6Im42MDI2NTgxOTRiNTQ0YWM4ODc2NjMxNDM1NDIyOTJhYSIsImlhdCI6MTczODg2MDA0MywiZXhwIjoxNzM4ODc4MDQzfQ.tYQwF2EVfoWJNnUq98jKzbnd5NuBu-7KRdPUItyv0R4",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -246,7 +257,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"friendId\": \"sf0d1ac4065e54e6bbdb362bf20767982\"\n}",
+							"raw": "{\n  \"friendId\": \"neb2d6e49859a4430835a05edc926061a\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -254,12 +265,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/friends",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/friends",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"friends"
@@ -276,7 +285,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -293,16 +302,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/friends/0fbc725788d04db5a3e5889d2e611600",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/friends/neb2d6e49859a4430835a05edc926061a",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"friends",
-								"0fbc725788d04db5a3e5889d2e611600"
+								"neb2d6e49859a4430835a05edc926061a"
 							]
 						}
 					},
@@ -316,7 +323,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rub3J0aEBnbWFpbC5jb20iLCJpZCI6Im42MDI2NTgxOTRiNTQ0YWM4ODc2NjMxNDM1NDIyOTJhYSIsImlhdCI6MTczODg2MDA0MywiZXhwIjoxNzM4ODc4MDQzfQ.tYQwF2EVfoWJNnUq98jKzbnd5NuBu-7KRdPUItyv0R4",
+									"value": "{{auth_token}}",
 									"type": "string"
 								}
 							]
@@ -324,12 +331,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/friends?limit=1&offset=0",
-							"protocol": "http",
+							"raw": "{{base_url}}/api/friends?limit=10&page=0",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "3000",
 							"path": [
 								"api",
 								"friends"
@@ -337,10 +342,10 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "1"
+									"value": "10"
 								},
 								{
-									"key": "offset",
+									"key": "page",
 									"value": "0"
 								}
 							]
