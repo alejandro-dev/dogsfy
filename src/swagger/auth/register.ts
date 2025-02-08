@@ -24,7 +24,7 @@
  *             properties:
  *               username:
  *                 type: string
- *                 example: "john_doe"
+ *                 example: "johndoe"
  *               email:
  *                 type: string
  *                 format: email
