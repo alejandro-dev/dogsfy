@@ -1,0 +1,354 @@
+{
+	"info": {
+		"_postman_id": "a1a6f348-d6f1-4d25-a3fd-d94b73ce696f",
+		"name": "Indigitall Dogsfy Monolotic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"test23\",\n  \"email\": \"test3@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": -34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/n602658194b544ac887663143542292aa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"n602658194b544ac887663143542292aa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/s91a740aac5fd415e8f340fd4a3f680f7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"s91a740aac5fd415e8f340fd4a3f680f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/5cbc3c46344c4290bde23ba8e61fe416",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"5cbc3c46344c4290bde23ba8e61fe416"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"testNorth\",\n  \"email\": \"testnorth@gmail.com\",\n  \"password\": 123456,\n  \"confirm_password\": 123456,\n  \"lat\": 34.6037,\n  \"lng\": -58.3816,\n  \"language\": \"es\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"test@gmail.com\",\n  \"password\": 123456\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Friends",
+			"item": [
+				{
+					"name": "Add Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rub3J0aEBnbWFpbC5jb20iLCJpZCI6Im42MDI2NTgxOTRiNTQ0YWM4ODc2NjMxNDM1NDIyOTJhYSIsImlhdCI6MTczODg2MDA0MywiZXhwIjoxNzM4ODc4MDQzfQ.tYQwF2EVfoWJNnUq98jKzbnd5NuBu-7KRdPUItyv0R4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"friendId\": \"sf0d1ac4065e54e6bbdb362bf20767982\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/friends",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Friend",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiaWQiOiJjY2JiMGJhNjZkMWE0NzQ1YjlmNWY5MzJkYTE5NzA2ZSIsImlhdCI6MTczODg0Mjk1MiwiZXhwIjoxNzM4ODYwOTUyfQ.zgeRl_aP--2dyQ8ReNssf694jVpVqsLEZe6LvbZcEAY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/friends/0fbc725788d04db5a3e5889d2e611600",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends",
+								"0fbc725788d04db5a3e5889d2e611600"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Friends",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3Rub3J0aEBnbWFpbC5jb20iLCJpZCI6Im42MDI2NTgxOTRiNTQ0YWM4ODc2NjMxNDM1NDIyOTJhYSIsImlhdCI6MTczODg2MDA0MywiZXhwIjoxNzM4ODc4MDQzfQ.tYQwF2EVfoWJNnUq98jKzbnd5NuBu-7KRdPUItyv0R4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/friends?limit=1&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"friends"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

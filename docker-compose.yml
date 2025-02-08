@@ -1,0 +1,11 @@
+services:
+  dogsfy:
+    build:
+      dockerfile: dockerfile
+      context: ./
+    container_name: dogsfy
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - '/app/node_modules'
